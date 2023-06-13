@@ -3,6 +3,7 @@ import Form from 'react-bootstrap/Form';
 import axios from 'axios'
 import Alert from 'react-bootstrap/Alert';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 const Login = () => {
     const [data, setData] = useState({
         email: '',
@@ -77,8 +78,10 @@ const Login = () => {
                     <Button variant="primary" type="submit">
                         Login
                     </Button>
+                    <Link className='login-link mt-2' to={'/register'}>Register Now</Link>
+
                 </Form>
-            </div>
+            </div>  
 
         </>
     )

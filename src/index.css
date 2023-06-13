@@ -15,9 +15,7 @@ code {
 
 #root {
   height: 100vh;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradient 10s ease infinite;
+
 }
 
 @keyframes gradient {
@@ -38,27 +36,45 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;position: relative;
+  height: 100%;
+  position: relative;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
 }
 
 .login-page .alert {
- position: absolute;
- top: 5%;
- padding: 3px 5px;
- text-align: center;
- width: auto !important;
- transition: all 1s;
- animation: alert 1s ease ;
- 
+  position: absolute;
+  top: 5%;
+  padding: 3px 5px;
+  text-align: center;
+  width: auto !important;
+  transition: all 1s;
+  animation: alert 0.56s ease;
+  border-width: 3px;
 }
-@keyframes alert{
+
+.alert-success {
+  box-shadow: 2px 2px 2px 1px rgba(134, 191, 76, 0.579), -2px -2px 2px 1px rgba(134, 191, 76, 0.536);
+
+}
+
+.alert-danger {
+  box-shadow: 2px 2px 2px 1px rgba(142, 81, 48, 0.579), -2px -2px 2px 1px rgba(118, 58, 44, 0.578);
+
+}
+
+@keyframes alert {
   0% {
     top: 0%;
   }
+
   100% {
-    top: 5%;;
+    top: 5%;
+    ;
   }
 }
+
 .login-page Form {
   width: 250px;
   height: auto;
@@ -80,6 +96,17 @@ code {
   overflow: hidden;
 }
 
+.login-page input:focus {
+  outline: none !important;
+
+}
+
 .login-page label {
   font-size: smaller;
+}
+
+.login-link {
+  font-size: smaller !important;
+  text-align: center;
+  display: grid;
 }
