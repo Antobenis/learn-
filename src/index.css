@@ -5,9 +5,81 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root {
+  height: 100vh;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;position: relative;
+}
+
+.login-page .alert {
+ position: absolute;
+ top: 5%;
+ padding: 3px 5px;
+ text-align: center;
+ width: auto !important;
+ transition: all 1s;
+ animation: alert 1s ease ;
+ 
+}
+@keyframes alert{
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: 5%;;
+  }
+}
+.login-page Form {
+  width: 250px;
+  height: auto;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.274);
+  padding: 20px;
+}
+
+.login-page Button {
+  width: 100%;
+  padding: 2px;
+  font-size: smaller;
+}
+
+.login-page input {
+  width: 100%;
+  padding: 2px 15px;
+  font-size: smaller;
+  overflow: hidden;
+}
+
+.login-page label {
+  font-size: smaller;
 }
