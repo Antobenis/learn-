@@ -3,8 +3,9 @@ import Form from 'react-bootstrap/Form';
 import axios from 'axios'
 import Alert from 'react-bootstrap/Alert';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 const Login = () => {
+    const navigate = useNavigate()
     const [data, setData] = useState({
         email: '',
         password: ''
@@ -18,6 +19,7 @@ const Login = () => {
             .then(function (response) {
                 console.log(response);
                 setshowSuccessAlert(true)
+                navigate('/get')
             })
             .catch(function (error) {
                 console.log(error, 'errer');
@@ -81,7 +83,7 @@ const Login = () => {
                     <Link className='login-link mt-2' to={'/register'}>Register Now</Link>
 
                 </Form>
-            </div>  
+            </div>
 
         </>
     )

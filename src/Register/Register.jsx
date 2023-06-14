@@ -4,19 +4,22 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form'
 const Register = () => {
-    const [inputData, setInuptData] = useState("")
-    const [successAlert, setSuccessAlert] = useState(false)
-    const [DangerAlert, setDangerAlert] = useState(false)
+    const [inputData, setInuptData] = useState({
+        email:'',
+        password:''
+    })
+    // const [successAlert, setSuccessAlert] = useState(false)
+    // const [dangerAlert, setdangerAlert] = useState(false)
     const handleSubmit = (e) => {
         e.preventDefault();
         axios.post('https://reqres.in/api/register', inputData)
             .then(function (response) {
                 console.log(response);
-                setSuccessAlert(true)
+                // setSuccessAlert(true)
             })
             .catch(function (error) {
                 console.log(error);
-                setDangerAlert(true)
+                // setdangerAlert(true)
             })
     }
     const handleChange = (e) => {
@@ -28,8 +31,8 @@ const Register = () => {
     return (
         <>
             <div className="login-page">
-                <Alert
-                    show={DangerAlert}
+                {/* <Alert
+                    show={dangerAlert}
                     variant="danger"
                     className=" mt-3 ml-3 "
                 >
@@ -41,7 +44,7 @@ const Register = () => {
                     className="w-25 mt-3 ml-3 "
                 >
                     <strong>Sucessfully Registered</strong>
-                </Alert>
+                </Alert> */}
                 <Form onSubmit={handleSubmit}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email </Form.Label>
