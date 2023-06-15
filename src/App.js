@@ -2,7 +2,7 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import './App.css';
 import { lazy } from 'react';
 import { Suspense } from 'react';
-const Login = lazy(() => import('./login/Login.jsx'))
+const Login = lazy(() => import('./login/login'))
 const Register = lazy(() => import('./Register/Register.jsx'))
 const Get = lazy(() => import('./get/Get.jsx'))
 const Update = lazy(() => import('./update/Update.jsx'))

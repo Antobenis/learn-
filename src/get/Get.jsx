@@ -39,8 +39,7 @@ const Get = () => {
                             <td>{datas.last_name}</td>
                             <td>{datas.email}</td>
                             <td><img src={datas.avatar} height={50} /></td>
-                            <td><Link><Update /></Link></td>
-                            <td><Link className='btn btn-danger'>Delete</Link></td>
+                            <td><Link to={`/update/${datas && datas.id}`} className='btn btn-primary'>View</Link></td>
                         </tr>
                     ))}
                 </tbody>
