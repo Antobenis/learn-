@@ -166,7 +166,7 @@ const Update = () => {
                             Cancel
                         </Button>
                         <Button onClick={() => { deletes(info && info.id); handleCloseDelete() }} className='btn-danger'>
-                           Delete
+                            Delete
                         </Button>
                     </Modal.Footer>
                 </Modal>
