@@ -5,6 +5,7 @@ import { Suspense } from 'react';
 const Login = lazy(() => import('./login/Login.jsx'))
 const Register = lazy(() => import('./Register/Register.jsx'))
 const Get = lazy(() => import('./get/Get.jsx'))
+const Update = lazy(() => import('./update/Update.jsx'))
 function App() {
   return (
     <>
@@ -14,6 +15,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/get" element={<Get />} />
+          <Route path="/update/:id" element={<Update />} />
         </Routes>
       </Suspense>
     </>

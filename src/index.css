@@ -110,3 +110,34 @@ code {
   text-align: center;
   display: grid;
 }
+tbody img{
+  border-radius: 50%;
+  margin: auto;
+}
+tbody , thead{
+  text-align: center;
+}
+.modal-content img{
+ border-radius: 50%;
+width:20%;
+margin-right: 60px;
+
+}
+.modal-content{
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  width: 400px;
+  padding: 30px;
+  background-color: #fff0f6;
+}
+
+.modal-content Button{
+  margin-left: 10px;
+}
+.modal-content input{
+  background: linear-gradient(-45deg, #d9f7be, #b5f5ec, #bae0ff, #d3adf7);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
