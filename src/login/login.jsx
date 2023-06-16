@@ -4,6 +4,7 @@ import axios from 'axios'
 import Alert from 'react-bootstrap/Alert';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import Cookies from 'js-cookie';
 const Login = () => {
     const navigate = useNavigate()
     const [data, setData] = useState({
@@ -17,9 +18,10 @@ const Login = () => {
         axios.post('https://reqres.in/api/login', data
         )
             .then(function (response) {
-                console.log(response);
-                setshowSuccessAlert(true)
+                console.log(response.data.token);
+                Cookies.set( 'tocken',response?.data?.token)
                 navigate('/get')
+                setshowSuccessAlert(true)
             })
             .catch(function (error) {
                 console.log(error, 'errer');
@@ -66,6 +68,7 @@ const Login = () => {
                             placeholder="Enter email"
                             onChange={handleChange}
                             name='email'
+
                         />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicPassword">

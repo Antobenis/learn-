@@ -8,10 +8,10 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 const Update = () => {
     const { id } = useParams()
+    const [inuptfield, setInputField] = useState('')
+    const [info, setInfo] = useState(null)
     const [show, setShow] = useState(false);
     const [showDelete, setShowDelete] = useState(false);
-    const [info, setInfo] = useState(null)
-    const [inuptfield, setInputField] = useState('')
     const [showDangerAlert, setshowDangerAlert] = useState(false);
     const [showSuccessAlert, setshowSuccessAlert] = useState(false);
     // console.log(inuptfield, 'input')
